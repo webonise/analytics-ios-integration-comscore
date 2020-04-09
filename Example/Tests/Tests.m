@@ -80,7 +80,10 @@ describe(@"SEGComScoreIntegration", ^{
             traits:@{ @"name" : @"Milhouse Van Houten",
                       @"gender" : @"male",
                       @"emotion" : @"nerdy",
-                     }
+                      @"isMarried" : @YES,
+                      @"kids" : @[@"Dennis", @"Donald", @"Bunny"],
+                      @"age": @30
+            }
             context:@{}
             integrations:@{}];
 
@@ -89,6 +92,9 @@ describe(@"SEGComScoreIntegration", ^{
         [verify(configuration) setPersistentLabelWithName:@"name" value:@"Milhouse Van Houten"];
         [verify(configuration) setPersistentLabelWithName:@"gender" value:@"male"];
         [verify(configuration) setPersistentLabelWithName:@"emotion" value:@"nerdy"];
+        [verify(configuration) setPersistentLabelWithName:@"isMarried" value:@"1"];
+        [verify(configuration) setPersistentLabelWithName:@"kids" value:@"Dennis,Donald,Bunny"];
+        [verify(configuration) setPersistentLabelWithName:@"age" value:@"30"];
     });
 
     it(@"track with props", ^{
