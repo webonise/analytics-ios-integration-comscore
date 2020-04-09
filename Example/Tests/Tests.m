@@ -82,7 +82,8 @@ describe(@"SEGComScoreIntegration", ^{
                       @"emotion" : @"nerdy",
                       @"isMarried" : @YES,
                       @"kids" : @[@"Dennis", @"Donald", @"Bunny"],
-                      @"age": @30}
+                      @"age": @30
+            }
             context:@{}
             integrations:@{}];
 
