@@ -92,6 +92,9 @@ describe(@"SEGComScoreIntegration", ^{
         [verify(configuration) setPersistentLabelWithName:@"name" value:@"Milhouse Van Houten"];
         [verify(configuration) setPersistentLabelWithName:@"gender" value:@"male"];
         [verify(configuration) setPersistentLabelWithName:@"emotion" value:@"nerdy"];
+        [verify(configuration) setPersistentLabelWithName:@"isMarried" value:@"1"];
+        [verify(configuration) setPersistentLabelWithName:@"kids" value:@"Dennis,Donald,Bunny"];
+        [verify(configuration) setPersistentLabelWithName:@"age" value:@"30"];
     });
 
     it(@"track with props", ^{
